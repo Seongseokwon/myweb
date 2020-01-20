@@ -45,18 +45,11 @@ $(window).scroll(function() {
 
 $(".mNav").click(function() {
   $(".mainMenu").slideToggle();
-  var wWidth = $(this).width();
-  if (wWidth <= 500) {
-    $(".menu").slideToggle();
-  }
 });
 
 $(window).resize(function() {
   var wWidth = $(this).width();
-  if (wWidth > 600 && $(".mainMenu").is(":hidden")) {
+  if (wWidth >= 600 && $(".mainMenu").is(":hidden")) {
     $(".mainMenu").removeAttr("style");
-  }
-  if (wWidth >= 500 && $(".menu").is(":hidden")) {
-    $(".menu").removeAttr("style");
   }
 });

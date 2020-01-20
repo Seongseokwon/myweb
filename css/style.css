@@ -35,7 +35,6 @@ body {
   color: #fff;
 }
 
-
 #nav .mNav {
   display: none;
   position: absolute;
@@ -44,7 +43,6 @@ body {
   width: 65px;
   height: 45px;
   cursor: pointer;
-
 }
 
 #mainNav {
@@ -54,7 +52,6 @@ body {
   top: 60px;
   border-top: 1px solid #868e96;
   border-bottom: 1px solid #868e96;
-  ;
   transition: all 0.5 ease;
 }
 
@@ -70,18 +67,18 @@ body {
   display: inline-block;
   margin: 15px 70px;
   padding-top: 10px;
+  color: #fff;
 }
 
-
 #mainNav li.active {
-  background: #495057;
+  background: #fff;
   width: 100%;
   border-radius: 10px;
-
 }
 
 #mainNav li.active a {
-  color: #fff;
+  color: #2c2c2c;
+  font-weight: 700;
 }
 
 /* nav */
@@ -119,15 +116,16 @@ body {
 
 /* contents */
 
-#contents>section {
+#contents > section {
   height: 100vh;
   line-height: 100vh;
 }
 
 #section1 {
-  background: radial-gradient(ellipse farthest-corner at center top,
-      #e7f5ff,
-      #74c0fc);
+  height: 100vh;
+  line-height: 100vh;
+  background: url(../img/home_bg_1920.jpg) left top no-repeat;
+  background-size: cover;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -136,55 +134,67 @@ body {
 #section1 .sec1_left {
   width: 50%;
   height: 100vh;
-
 }
 
 #section1 .sec1_right {
   width: 50%;
   height: 100vh;
-
 }
 
 #section2 {
-  background: radial-gradient(ellipse farthest-corner at center top,
-      #74c0fc,
-      #339af0);
+  background: radial-gradient(
+    ellipse farthest-corner at center top,
+    #74c0fc,
+    #339af0
+  );
 }
 
 #section3 {
-  background: radial-gradient(ellipse farthest-corner at center top,
-      #5c7cfa,
-      #339af0);
+  background: radial-gradient(
+    ellipse farthest-corner at center top,
+    #5c7cfa,
+    #339af0
+  );
 }
 
 #section4 {
-  background: radial-gradient(ellipse farthest-corner at center top,
-      #74c0fc,
-      #3b5bdb);
+  background: radial-gradient(
+    ellipse farthest-corner at center top,
+    #74c0fc,
+    #3b5bdb
+  );
 }
 
-
-@media(max-width:1220px) {
+@media (max-width: 1220px) {
   #mainNav li a {
     margin: 20px 55px;
   }
+  #section1 {
+    height: 100vh;
+    line-height: 100vh;
+    background: url(../img/home_bg_1920.jpg) no-repeat;
+    background-size: cover;
+  }
 }
 
-@media(max-width:1024px) {
+@media (max-width: 1024px) {
   #mainNav li a {
     margin: 20px 35px;
   }
 }
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
   #mainNav li a {
     margin: 20px 19px;
   }
 }
 
 /* 모바일 */
-@media(max-width:600px) {
-
+@media (max-width: 600px) {
+  #section1 {
+    background: url(../img/home_bg_1280.jpg) no-repeat;
+    background-size: cover;
+  }
   #mainNav {
     display: block;
     border-bottom: none;
@@ -205,23 +215,16 @@ body {
 
   .mainMenu {
     display: none;
-
   }
 
   #nav .mNav {
-    display: flex;
+    display: block;
   }
-
-
-
 }
 
-@media(max-width:500px) {
-  #nav .menu {
+@media (max-width: 500px) {
+  #nav .menu li {
     display: none;
-    position: absolute;
-    right: 0;
-    top: 65vh;
   }
 
   #nav .mNav {
